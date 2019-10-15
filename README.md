@@ -1,13 +1,11 @@
-# Example how to use Express and TypeORM with TypeScript
+# Express Typescript Boilerplate
+## Using TypeStack Routing Controllers for decorator-based routing and TypeORM for typed Object-Relational-Mapping
 
-1. clone repository 
-2. run `npm i`
-3. edit `ormconfig.json` and change your database configuration (you can also change a database type, but don't forget to install specific database drivers)
-4. run `npm start`
-5. open `http://localhost:3000/posts` and you'll empty array
-6. use curl, postman or other tools to send http requests to test your typeorm-based API
-
-## How to use CLI?
-
-1. install `typeorm` globally: `npm i -g typeorm`
-2. run `typeorm -h` to show list of available commands
+### Installation:
+1. Clone this repository
+2. run `npm install` to install dependencies.
+3. Edit `ormconfig.json` and change the database configuration. By default this uses MySQL, so you'll need to uninstall other database adapters (and uninstall the MySql one) and edit `ormconfig.json` to use this new adapter.
+4. Run `npm run start-dev` to launch the server with nodemon watcher. Run with `npm run start` to launch without nodemon.
+5. Open `http://localhost:3000/api/v1` to see the "Hello, world!" example.
+6. Open `http://localhost:3000/api/v1/your_name` to see the "Hello, your_name!" example.
+7. Build the app to `.build/` by running `npm run build`.
