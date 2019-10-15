@@ -1,7 +1,7 @@
 # Express Typescript Boilerplate
-## Using TypeStack Routing Controllers for decorator-based routing and TypeORM for typed Object-Relational-Mapping
+### Using TypeStack Routing Controllers for decorator-based routing and TypeORM for typed Object-Relational-Mapping
 
-### Installation:
+#### Installation:
 1. Clone this repository
 2. run `npm install` to install dependencies.
 3. Edit `ormconfig.json` and change the database configuration. By default this uses MySQL, so you'll need to uninstall other database adapters (and uninstall the MySql one) and edit `ormconfig.json` to use this new adapter.
