@@ -1,0 +1,32 @@
+{
+    "extends": "tslint:recommended",
+    "rules": {
+        "eofline": false,
+        "no-console": false,
+        "one-line": false,
+        "typedef-whitespace": [
+            true,
+            {
+              "call-signature": "onespace",
+              "index-signature": "onespace",
+              "parameter": "onespace",
+              "property-declaration": "onespace",
+              "variable-declaration": "onespace"
+            },
+            {
+              "call-signature": "onespace",
+              "index-signature": "onespace",
+              "parameter": "onespace",
+              "property-declaration": "onespace",
+              "variable-declaration": "onespace"
+            }
+          ],
+          "ordered-imports": false,
+          "no-trailing-whitespace": {
+              "options": [
+                  "ignore-blank-lines"
+              ]
+          },
+          "trailing-comma": false
+    }
+}
