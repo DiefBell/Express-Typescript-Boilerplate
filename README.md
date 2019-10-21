@@ -1,4 +1,5 @@
 # Express Typescript Boilerplate
+Lightweight, barebones boilerplate with no extra crap that you may not need.
 ### Using TypeStack Routing Controllers for decorator-based routing and TypeORM for typed Object-Relational-Mapping
 
 #### Installation:
