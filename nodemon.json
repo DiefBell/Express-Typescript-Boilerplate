@@ -1,5 +1,5 @@
 {
-    "watch": [ "src", "nodemon.json", "ormconfig.json" ],
+    "watch": [ "src" ],
     "ext": "ts json",
     "ignore": [ "src/**/*.spec.ts" ],
     "exec": "ts-node ./src/index.ts"

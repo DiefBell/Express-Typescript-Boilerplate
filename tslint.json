@@ -1,32 +1,30 @@
 {
-    "extends": "tslint:recommended",
-    "rules": {
-        "eofline": false,
-        "no-console": false,
-        "one-line": false,
-        "typedef-whitespace": [
-            true,
-            {
-              "call-signature": "onespace",
-              "index-signature": "onespace",
-              "parameter": "onespace",
-              "property-declaration": "onespace",
-              "variable-declaration": "onespace"
-            },
-            {
-              "call-signature": "onespace",
-              "index-signature": "onespace",
-              "parameter": "onespace",
-              "property-declaration": "onespace",
-              "variable-declaration": "onespace"
-            }
-          ],
-          "ordered-imports": false,
-          "no-trailing-whitespace": {
-              "options": [
-                  "ignore-blank-lines"
-              ]
-          },
-          "trailing-comma": false
-    }
+	"defaultSeverity": "error",
+	"rules": {
+		"one-line": false,
+		"semicolon": true,
+		"no-var-keyword": true,
+		"typedef-whitespace": [
+			true,
+			{
+				"call-signature": "onespace",
+				"index-signature": "onespace",
+				"parameter": "onespace",
+				"property-declaration": "onespace",
+				"variable-declaration": "onespace"
+			},
+			{
+				"call-signature": "onespace",
+				"index-signature": "onespace",
+				"parameter": "onespace",
+				"property-declaration": "onespace",
+				"variable-declaration": "onespace"
+			}
+		],
+		"arrow-parens": true,
+		"only-arrow-functions": true,
+		"one-variable-per-declaration": true,
+		"typedef": true,
+		"space-before-function-paren": false
+	}
 }

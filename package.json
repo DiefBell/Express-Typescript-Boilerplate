@@ -1,7 +1,7 @@
 {
   "name": "express-typescript-boilerplate",
   "version": "0.0.1",
-  "description": "Example how to use Express and TypeORM with TypeScript.",
+  "description": "Boilerplate for how to use Express and TypeORM with TypeScript.",
   "license": "MIT",
   "readmeFilename": "README.md",
   "author": {
@@ -48,7 +48,10 @@
   },
   "scripts": {
     "start": "ts-node src/index.ts",
-    "start-dev": "nodemon .",
-    "build": "tsc --outdir .build/"
+    "start:dev": "nodemon .",
+    "start:prod": "node www/index.ts",
+    "prebuild": "tslint --config tslint.json --project tsconfig.json",
+    "build": "tsc --outdir dist/www/",
+    "postbuild": "cp package.json dist/"
   }
 }
