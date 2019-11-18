@@ -1,17 +1,25 @@
 # Express Typescript Boilerplate
-Lightweight, barebones boilerplate with no extra crap that you may not need.
-### Using TypeStack Routing Controllers for decorator-based routing and TypeORM for typed Object-Relational-Mapping
+Boilerplate for an Express server using the power of Typescript with TypeStack Routing Controllers for decorator-based routing and TypeORM for typed object relational mapping. The dotenv package is used for injecting environment variables into test code.
 
-** Please let me know if there are any examples you'd like to see :) There isn't much in this project on how to use TypeORM or TypeStack Routing Controllers, but their documentation is really really good! **
+You can overwrite the tslint.json as it is fairly opinionated and not to everyone's taste :)
+
+Please let me know if there are any examples you'd like to see :) TypeORM and TypeStack Routing Controllers's documentation is really really good!
 
 #### Installation:
-1. Clone this repository
+1. Clone this repository edit the repository info in `package.json` and any relavent git settings.
 2. Run `npm install` to install dependencies.
-3. Edit `ormconfig.json` and change the database configuration. By default this uses MySQL, so you'll need to uninstall other database adapters (and uninstall the MySql one) and edit `ormconfig.json` to use this new adapter.
-4. Run `npm run start-dev` to launch the server with nodemon watcher. Run with `npm run start` to launch without nodemon.
+3. Edit `dotenv` and change the server and database configurations. By default, the database uses MySQL, so if you're using something else you'll need to install other database adapters (and uninstall the MySql one) and edit the `src/config/datbase.cfg.ts` file to whatever one you're now using.
+
+#### Running the App
+4. Run `npm run start:dev` to launch the server with nodemon watcher, which will reload the server when you make changes. Run with `npm run start` to launch without nodemon.
 5. Open `http://localhost:3000/api/v1` to see the "Hello, world!" example.
 6. Open `http://localhost:3000/api/v1/your_name` to see the "Hello, your_name!" example.
-7. Build the app to `.build/` by running `npm run build`.
+
+#### Building and Deploying
+7. Build the app to `./dist` by running `npm run build`. This needs to be done from a Bash terminal as it uses the `cp` command to copy some files into the dist directory.
+8. CD into the dist directory and run `npm install --production` to install production packages. Note that you should probably leave this until you've actually deployed it to a server.
+9. Either set your environment variables to match the ones used in `.env` or copy your `.env` file into the `./dist` folder.
+10. Run the production server with `npm run start:prod`.
 
 #### Useful Documentation:
 - [Controller routing](https://github.com/typestack/routing-controllers)
@@ -19,6 +27,5 @@ Lightweight, barebones boilerplate with no extra crap that you may not need.
 - [Class Validation](https://github.com/typestack/class-validator)
 
 ##### Optional:
-+ Build the app to `.build/` by running `npm run build`.
 + Install the "#region folding for VS Code" package to allow for region folding.
 + Install the "vscode-icons" package for nicer icons in the file explorer.
