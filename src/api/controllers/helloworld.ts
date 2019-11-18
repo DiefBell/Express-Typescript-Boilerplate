@@ -1,6 +1,6 @@
 import { Controller, Get, Param } from "routing-controllers";
 
-@Controller("/api/v1")
+@Controller("/hello")
 export class HelloWorldController
 {
     @Get("/")
