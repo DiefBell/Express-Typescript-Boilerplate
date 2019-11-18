@@ -1,4 +1,11 @@
 {
+	"linterOptions": {
+		"exclude": [
+			"dist/**/*.*",
+			"colorlib_template/**/*.*",
+			"src/public/**/*.*"
+		]
+	},
 	"defaultSeverity": "error",
 	"rules": {
 		"one-line": false,

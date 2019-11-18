@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ tab_title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/png" href="/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS -->
+    <!-- bootstrap v3.3.7 css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="/css/animate.css">
+    <!-- owl.carousel.2.0.0-beta.2.4 css -->
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <!-- swiper.min.css -->
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <!-- font-awesome v4.6.3 css -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <!-- flaticon.css -->
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <!-- magnific-popup.css -->
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <!-- metisMenu.min.css -->
+    <link rel="stylesheet" href="/css/metisMenu.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    {{{ body }}}
+
+    <!-- jquery latest version -->
+    <script src="/js/vendor/jquery-2.2.4.min.js "></script>
+    <!-- popper.min.js -->
+    <script src="/js/vendor/popper.min.js "></script>
+    <!-- bootstrap js -->
+    <script src="/js/bootstrap.min.js "></script>
+    <!-- owl.carousel.2.0.0-beta.2.4 css -->
+    <script src="/js/owl.carousel.min.js "></script>
+    <!-- swiper.min.js -->
+    <script src="/js/swiper.min.js "></script>
+    <!-- mailchimp.js -->
+    <script src="/js/mailchimp.js"></script>
+    <!-- plugins js -->
+    <script src="/js/jquery.canvasjs.min.js"></script>
+    <!-- metisMenu.min.js -->
+    <script src="/js/metisMenu.min.js"></script>
+    <!-- plugins js -->
+    <script src="/js/plugins.js "></script>
+    <script>
+        // chart
+        window.onload = function () {
+            var limit = 10000;    //increase number of dataPoints by increasing the limit
+            var y = 100;
+            var data = [];
+            var dataSeries = { type: "line" };
+            var dataPoints = [];
+            for (var i = 0; i < limit; i += 1) {
+                y += Math.round(Math.random() * 10 - 5);
+                dataPoints.push({
+                    x: i,
+                    y: y
+                });
+            }
+            dataSeries.dataPoints = dataPoints;
+            data.push(dataSeries);
+
+            //Better to construct options first and then pass it as a parameter
+            var options = {
+                zoomEnabled: true,
+                animationEnabled: true,
+                axisY: {
+                    includeZero: false
+                },
+                data: data  // random data
+            };
+
+            $("#chartContainer").CanvasJSChart(options);
+        }
+    </script>
+    <!-- main js -->
+    <script src="/js/scripts.js "></script>
+</body>
+
+</html>

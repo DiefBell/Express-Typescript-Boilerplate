@@ -1,17 +1,23 @@
-import { Controller, Get, Param } from "routing-controllers";
+import { Controller, Get, Param, Render } from "routing-controllers";
 
 @Controller("/hello")
 export class HelloWorldController
 {
     @Get("/")
+    @Render("index")
     private helloWorld()
     {
-        return "Hello, world!";
+        return {
+            tab_title: "TS Express Boilerplate"
+        };
     }
     
     @Get("/:name")
+    @Render("index")
     private helloPerson(@Param("name") name : string)
     {
-        return `Hello, ${name}!`;
+        return {
+            tab_title: `Hello, ${name}!`
+        };
     }
 }
