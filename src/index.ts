@@ -1,15 +1,24 @@
-import "reflect-metadata";
-import { createConnection } from "typeorm";
-import { createExpressServer } from "routing-controllers";
+require('dotenv').config(); // inject values in .env into environment variables
+import * as Config from "./config/_configs";
 
-// create connection with database
-// note that it's not active database connection
-// TypeORM creates connection pools and uses them for your requests
-createConnection().then(async (connection) =>
-{
-    createExpressServer({
-        controllers: [ __dirname + "/controllers/*.ts" ]
-    }).listen(3000);
-    console.log("Server started on port 3000.");
-})
-.catch((error) => console.log("TypeORM connection error: ", error));
+import 'reflect-metadata';
+import { createConnection } from 'typeorm';
+import { useExpressServer } from 'routing-controllers';
+import * as express from 'express';
+
+// don't use routing-controllers's "createExpressServer" as routes should be done
+// after other middlewares else it messes things up
+const app = express();
+// declare middlewares here
+
+createConnection(Config.data.settings)
+    .then(async (connection) =>
+    {
+        const server = useExpressServer(app, Config.server.settings).listen(Config.server.port);
+        console.log(`Express server listening on port ${Config.server.port}.`);
+        console.log(`Connected to database "${Config.data.database}" on ${Config.data.host}:${Config.data.port}.`);
+    })
+    .catch((error) =>
+    {
+        console.log(error);
+    });
