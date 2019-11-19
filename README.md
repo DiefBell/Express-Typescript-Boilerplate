@@ -1,8 +1,5 @@
 # Express Typescript Boilerplate
-### Handlebars View Engine
 Boilerplate for an Express server using the power of Typescript with TypeStack Routing Controllers for decorator-based routing and TypeORM for typed object relational mapping. The dotenv package is used for injecting environment variables into test code.
-
-This example shows how you can use the Handlebars view engine to render your HTML templates using TypeStack Routing Controllers, though it should work with _some_ other view engines too (check they use the same syntax to connect to the app as in `handlebars.cfg.ts`).
 
 You can overwrite the tslint.json as it is fairly opinionated and not to everyone's taste :)
 
@@ -15,8 +12,8 @@ Please let me know if there are any examples you'd like to see :) TypeORM and Ty
 
 #### Running the App
 4. Run `npm run start:dev` to launch the server with nodemon watcher, which will reload the server when you make changes. Run with `npm run start` to launch without nodemon.
-5. Open `http://localhost:3000/hello` to see the example web page.
-6. Open `http://localhost:3000/hello/your_name` to see the example web page, but with the tab title replaced with `your_name` by Handlebars.
+5. Open `http://localhost:3000/hello` to see the "Hello, world!" example.
+6. Open `http://localhost:3000/hello/your_name` to see the "Hello, your_name!" example.
 
 #### Building and Deploying
 7. Build the app to `./dist` by running `npm run build`. This needs to be done from a Bash terminal as it uses the `cp` command to copy some files into the dist directory.
@@ -28,7 +25,6 @@ Please let me know if there are any examples you'd like to see :) TypeORM and Ty
 - [Controller routing](https://github.com/typestack/routing-controllers)
 - [TypeORM](https://typeorm.io/#/)
 - [Class Validation](https://github.com/typestack/class-validator)
-- [Express Handlebars](https://github.com/ericf/express-handlebars)
 
 ##### Optional:
 + Install the "#region folding for VS Code" package to allow for region folding.
