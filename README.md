@@ -1,5 +1,8 @@
 # Express Typescript Boilerplate
+### Handlebars View Engine
 Boilerplate for an Express server using the power of Typescript with TypeStack Routing Controllers for decorator-based routing and TypeORM for typed object relational mapping. The dotenv package is used for injecting environment variables into test code.
+
+This example shows how you can use the Handlebars view engine to render your HTML templates using TypeStack Routing Controllers, though it should work with _some_ other view engines too (check they use the same syntax to connect to the app as in `handlebars.cfg.ts`).
 
 You can overwrite the tslint.json as it is fairly opinionated and not to everyone's taste :)
 
