@@ -9,7 +9,7 @@ import * as express from 'express';
 // don't use routing-controllers's "createExpressServer" as routes should be done
 // after other middlewares else it messes things up
 const app = express();
-// declare middlewares here
+Config.logger.init(app);
 
 createConnection(Config.data.settings)
     .then(async (connection) =>
