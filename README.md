@@ -1,5 +1,10 @@
 # Express Typescript Boilerplate
+### OAuth2 Authentication with PassportJS
 Boilerplate for an Express server using the power of Typescript with TypeStack Routing Controllers for decorator-based routing and TypeORM for typed object relational mapping. The dotenv package is used for injecting environment variables into test code.
+
+This example shows you how to authenticate your users with Discord using OAuth2, though you should be able to easily adapt this to use another [PassportJS Strategy](http://www.passportjs.org/packages/). After authentication, the user is directed to the "profile" page which will display their Discord avatar.
+
+There is a TypeORM model in src/api/models for representing a user in a database, which shows you some of the basics of using TypeORM.
 
 You can overwrite the tslint.json as it is fairly opinionated and not to everyone's taste :)
 
@@ -12,8 +17,8 @@ Please let me know if there are any examples you'd like to see :) TypeORM and Ty
 
 #### Running the App
 4. Run `npm run start:dev` to launch the server with nodemon watcher, which will reload the server when you make changes. Run with `npm run start` to launch without nodemon.
-5. Open `http://localhost:3000/hello` to see the "Hello, world!" example.
-6. Open `http://localhost:3000/hello/your_name` to see the "Hello, your_name!" example.
+5. Open `http://localhost:3000/` to see a link to the authentication page.
+6. You will then be redirected to `http://localhost:3000/profile`, which will display your Discord avatar.
 
 #### Building and Deploying
 7. Build the app to `./dist` by running `npm run build`. This needs to be done from a Bash terminal as it uses the `cp` command to copy some files into the dist directory.
@@ -25,6 +30,7 @@ Please let me know if there are any examples you'd like to see :) TypeORM and Ty
 - [Controller routing](https://github.com/typestack/routing-controllers)
 - [TypeORM](https://typeorm.io/#/)
 - [Class Validation](https://github.com/typestack/class-validator)
+- [PassportJS](http://www.passportjs.org/)
 
 ##### Optional:
 + Install the "#region folding for VS Code" package to allow for region folding.
