@@ -13,18 +13,19 @@ Please let me know if there are any examples you'd like to see :) TypeORM and Ty
 #### Installation:
 1. Clone this repository edit the repository info in `package.json` and any relavent git settings.
 2. Run `npm install` to install dependencies.
-3. Edit `dotenv` and change the server and database configurations. By default, the database uses MySQL, so if you're using something else you'll need to install other database adapters (and uninstall the MySql one) and edit the `src/config/datbase.cfg.ts` file to whatever one you're now using.
+3. Edit `.env` and change the server and database configurations. By default, the database uses MySQL, so if you're using something else you'll need to install other database adapters (and uninstall the MySql one) and edit the `src/config/datbase.cfg.ts` file to whatever one you're now using.
+4. Add a session key (any made up string) and your Discord application client ID and secret to `.env`. If you don't yet have a Discord OAuth2 application, you can make one [here](https://discordapp.com/developers/applications/). You'll need to ensure that your redirect in the OAuth2 tab points to `http://localhost:3000/auth/discord/redirect`.
 
 #### Running the App
-4. Run `npm run start:dev` to launch the server with nodemon watcher, which will reload the server when you make changes. Run with `npm run start` to launch without nodemon.
-5. Open `http://localhost:3000/` to see a link to the authentication page.
-6. You will then be redirected to `http://localhost:3000/profile`, which will display your Discord avatar.
+5. Run `npm run start:dev` to launch the server with nodemon watcher, which will reload the server when you make changes. Run with `npm run start` to launch without nodemon.
+6. Open `http://localhost:3000/` to see a link to the authentication page.
+7. You will then be redirected to `http://localhost:3000/profile`, which will display your Discord avatar.
 
 #### Building and Deploying
-7. Build the app to `./dist` by running `npm run build`. This needs to be done from a Bash terminal as it uses the `cp` command to copy some files into the dist directory.
-8. CD into the dist directory and run `npm install --production` to install production packages. Note that you should probably leave this until you've actually deployed it to a server.
-9. Either set your environment variables to match the ones used in `.env` or copy your `.env` file into the `./dist` folder.
-10. Run the production server with `npm run start:prod`.
+8. Build the app to `./dist` by running `npm run build`. This needs to be done from a Bash terminal as it uses the `cp` command to copy some files into the dist directory.
+9. CD into the dist directory and run `npm install --production` to install production packages. Note that you should probably leave this until you've actually deployed it to a server.
+10. Either set your environment variables to match the ones used in `.env` or copy your `.env` file into the `./dist` folder.
+11. Run the production server with `npm run start:prod`.
 
 #### Useful Documentation:
 - [Controller routing](https://github.com/typestack/routing-controllers)
