@@ -11,7 +11,7 @@ Please let me know if there are any examples you'd like to see :) TypeORM and Ty
 #### Installation:
 1. Clone this repository edit the repository info in `package.json` and any relavent git settings.
 2. Run `npm install` to install dependencies.
-3. Edit `dotenv` and change the server and database configurations. By default, the database uses MySQL, so if you're using something else you'll need to install other database adapters (and uninstall the MySql one) and edit the `src/config/datbase.cfg.ts` file to whatever one you're now using.
+3. Edit `.env` and change the server and database configurations. By default, the database uses MySQL, so if you're using something else you'll need to install other database adapters (and uninstall the MySql one) and edit the `src/config/datbase.cfg.ts` file to whatever one you're now using.
 
 #### Running the App
 4. Run `npm run start:dev` to launch the server with nodemon watcher, which will reload the server when you make changes. Run with `npm run start` to launch without nodemon.
