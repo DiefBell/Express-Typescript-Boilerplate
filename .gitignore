@@ -3,3 +3,4 @@ src/**/*.js
 src/**/*.js.map
 .build
 dist
+.env
