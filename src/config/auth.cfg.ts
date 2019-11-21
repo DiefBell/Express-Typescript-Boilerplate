@@ -1,5 +1,6 @@
 import { Action, UnauthorizedError } from "routing-controllers";
 import * as jwt from 'jsonwebtoken';
+const debug = require('debug')("Auth");
 
 export namespace auth
 {
@@ -20,7 +21,7 @@ export namespace auth
         {
             if(err)
             {
-                console.log(err);
+                debug(err);
                 return reject(err);
             }
 
