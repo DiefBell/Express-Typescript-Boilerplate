@@ -25,6 +25,7 @@
 		"only-arrow-functions": true,
 		"one-variable-per-declaration": true,
 		"typedef": true,
-		"space-before-function-paren": false
+		"space-before-function-paren": false,
+		"no-console": true
 	}
 }
