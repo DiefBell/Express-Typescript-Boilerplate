@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Test</title>
+    <script>
+        function _(el)
+        {
+            return document.getElementById(el);
+        }
+
+        function uploadFiles()
+        {
+            const endpoint = "http://localhost:3000/upload/";
+            const jwtToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1VzZXJBZG1pbiI6ZmFsc2V9.lHvPkPrcFf8Apl17zI72inx99SQ_h8kcKSIynCCx11Y";
+
+
+            const files = _("files").files;
+            const formdata = new FormData();
+            for (let i = 0; i < files.length; i++)
+            {
+                // note how this uses the same name in the UploadedFiles decorator
+                // in our Upload controller
+                formdata.append("myFiles", files[i]);
+            }
+            const ajax = new XMLHttpRequest();
+            ajax.upload.addEventListener("progress", progressHandler, false);
+            ajax.addEventListener("load", completeHandler, false);
+            ajax.addEventListener("error", errorHandler, false);
+            ajax.addEventListener("abort", abortHandler, false);
+            ajax.open("POST", endpoint);
+
+            //ajax.setRequestHeader("Authorization", adminJwtToken);
+            console.log(formdata);
+            ajax.send(formdata);
+        }
+
+        function progressHandler(event)
+        {
+            _("loaded_n_total").innerHTML = "Uploaded " + Math.floor(event.loaded / 1024) + " kB of " + Math.floor(event.total / 1024) + " kB";
+            var percent = (event.loaded / event.total) * 100;
+            _("progressBar").value = Math.round(percent);
+            _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
+        }
+
+        function completeHandler(event)
+        {
+            _("status").innerHTML = event.target.responseText;
+            _("progressBar").value = 0; //wil clear progress bar after successful upload
+        }
+
+        function errorHandler(event)
+        {
+            _("status").innerHTML = "Upload Failed";
+        }
+
+        function abortHandler(event)
+        {
+            _("status").innerHTML = "Upload Aborted";
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Multipart File Upload</h2>
+    <form id="upload_form" enctype="multipart/form-data" method="post">
+        <input type="file" name="files[]" id="files" multiple><br><br>
+        <input type="button" onclick="uploadFiles()" value="Upload"><br>
+        <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+        <p id="loaded_n_total"></p>
+        <h3 id="status"></h3>
+    </form>
+</body>
+
+</html>

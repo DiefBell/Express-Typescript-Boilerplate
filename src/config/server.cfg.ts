@@ -1,4 +1,4 @@
-import { RoutingControllersOptions, Action } from "routing-controllers";
+import { RoutingControllersOptions } from "routing-controllers";
 
 export namespace server
 {

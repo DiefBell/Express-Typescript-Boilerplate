@@ -56,6 +56,7 @@
     "start:prod": "node www/index.js",
     "prebuild": "tslint --config tslint.json --project tsconfig.json",
     "build": "tsc --outdir dist/www/",
-    "postbuild": "cp package.json dist/"
+    "postbuild": "cp package.json dist/",
+    "test-server": "ts-node test-server/test-server.ts"
   }
 }
