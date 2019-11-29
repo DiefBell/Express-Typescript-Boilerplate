@@ -10,7 +10,6 @@ import * as express from 'express';
 // don't use routing-controllers's "createExpressServer" as routes should be done
 // after other middlewares else it messes things up
 const app = express();
-// declare middlewares here
 
 debug(`Attempting to connect to database "${Config.data.database}" on ${Config.data.host}:${Config.data.port}.`);
 createConnection(Config.data.settings)

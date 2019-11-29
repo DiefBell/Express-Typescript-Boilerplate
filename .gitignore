@@ -4,3 +4,5 @@ src/**/*.js.map
 .build
 dist
 .env
+tmp
+torrents
