@@ -27,7 +27,7 @@ Please let me know if there are any examples you'd like to see :) TypeORM and Ty
 - [Controller routing](https://github.com/typestack/routing-controllers)
 - [TypeORM](https://typeorm.io/#/)
 - [Class Validation](https://github.com/typestack/class-validator)
-= [Morgan Request Logger for Node.js](https://github.com/expressjs/morgan)
+- [Morgan Request Logger for Node.js](https://github.com/expressjs/morgan)
 
 ##### Optional:
 + Install the "#region folding for VS Code" package to allow for region folding.
